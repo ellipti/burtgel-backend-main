@@ -23,77 +23,77 @@ mongoose.connect(process.env.MONGODB_URI)
     });
 
     await User.create({
-      name: 'Hereglegch',
-      username: 'user1',
+      name: 'Hereglegch1',
+      username: 'user0',
       password: '1234',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch2',
       username: 'user1',
       password: '9900',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch3',
       username: 'user2',
       password: '2211',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch4',
       username: 'user3',
       password: '8808',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch5',
       username: 'user4',
       password: '9515',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch6',
       username: 'user5',
       password: '9969',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch7',
       username: 'user6',
       password: '4321',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch8',
       username: 'user7',
       password: '5678',
       role: 'user'
     });
 
     await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch9',
       username: 'user8',
       password: '9876',
       role: 'user'
     });
 
      await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch10',
       username: 'user9',
       password: '6543',
       role: 'user'
     });
 
      await User.create({
-      name: 'Hereglegch',
+      name: 'Hereglegch11',
       username: 'user10',
       password: '0987',
       role: 'user'
