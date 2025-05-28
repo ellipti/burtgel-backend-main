@@ -6,6 +6,7 @@ const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true }, // ← нэмэх
   phone: String,
   password: String, // Хэрвээ login хийдэг бол
+  email: { type: String, unique: true, required: true }, // ← нэмэх
   role: {
     type: String,
     enum: ['admin', 'user', 'player'],
