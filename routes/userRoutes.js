@@ -69,4 +69,14 @@ router.get('/list', async (req, res) => {
   }
 });
 
+router.get('/admins', async (req, res) => {
+  try {
+    const users = await User.find();
+    console.log(users)
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;
