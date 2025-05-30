@@ -48,10 +48,13 @@ router.post('/delete', async (req, res) => {
 
 router.post('/favourite', async (req, res) => {
   try {
+
     const { id } = req.body;
 
-    const user = await Customer.findOne(id);
-    await Customer.updateOne(id, {favourite: user.favourite == true ? false : true});
+    const user = await Customer.findOne({ _id: id });
+
+    const result = await Customer.updateOne({ _id: id }, { $set: { favourite: user.favourite == true ? false : true } });
+
     res.status(201).json({});
   } catch (err) {
     res.status(400).json({ error: err.message });
