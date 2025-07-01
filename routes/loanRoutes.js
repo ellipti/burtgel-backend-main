@@ -16,7 +16,7 @@ router.post('/add', async (req, res) => {
             return res.status(409).json({ message: 'User already exists. Use PUT to update.' });
         }
 
-        const newUser = new LoanUser({ id, name, amount });
+        const newUser = new LoanUser.create({ id, name, amount });
         await newUser.save();
 
         res.status(201).json({ message: 'User added successfully', user: newUser });
