@@ -7,11 +7,13 @@ const app = express(); // ✅ ЭНЭГҮЙГЭЭР use() ажиллахгүй
 
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const loanRoutes = require('./routes/loanRoutes');
 
 app.use(cors());
 app.use(express.json());
 
 app.use('/api/users', userRoutes);
+app.use('/api/loan', loanRoutes); // ✅ Энд байх ёстой
 app.use('/api/auth', authRoutes); // ✅ Энд байх ёстой
 
 mongoose.connect(process.env.MONGODB_URI)
