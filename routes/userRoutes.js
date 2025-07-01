@@ -8,12 +8,12 @@ router.post('/', async (req, res) => {
   try {
     const { name, phone, facebook, note } = req.body;
     var customer = await Customer.create({
-          name: name,
-          phone: phone,
-          facebook: facebook,
-          note: note,
-          favourite: false
-        });
+      name: name,
+      phone: phone,
+      facebook: facebook,
+      note: note,
+      favourite: false
+    });
     customer.save();
     res.status(201).json(customer);
   } catch (err) {
@@ -25,11 +25,11 @@ router.post('/update', async (req, res) => {
   try {
     const { id, name, phone, facebook, note } = req.body;
     await Customer.findByIdAndUpdate(id, {
-          name: name,
-          phone: phone,
-          facebook: facebook,
-          note: note,
-        });
+      name: name,
+      phone: phone,
+      facebook: facebook,
+      note: note,
+    });
     res.status(201).json({});
   } catch (err) {
     res.status(400).json({ error: err.message });

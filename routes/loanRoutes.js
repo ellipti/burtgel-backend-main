@@ -3,7 +3,7 @@ const router = express.Router();
 const LoanUser = require('../models/LoanUser');
 
 // POST /api/air – Add user
-router.post('/api/air', async (req, res) => {
+router.post('/add', async (req, res) => {
     const { id, name, amount } = req.body;
 
     if (!id || !name || typeof amount !== 'number') {
@@ -26,7 +26,7 @@ router.post('/api/air', async (req, res) => {
 });
 
 // PUT /api/air/:id – Edit user amount
-router.put('/api/air/:id', async (req, res) => {
+router.put('/edit/:id', async (req, res) => {
     const userId = parseInt(req.params.id, 10);
     const { amount } = req.body;
 
@@ -52,7 +52,7 @@ router.put('/api/air/:id', async (req, res) => {
 });
 
 // GET /api/air – Get all users
-router.get('/api/air', async (req, res) => {
+router.get('/list', async (req, res) => {
     try {
         const users = await LoanUser.find();
         res.status(200).json(users);
