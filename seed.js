@@ -92,7 +92,7 @@ mongoose.connect(process.env.MONGODB_URI)
       role: 'user'
     });
 
-     await User.create({
+    await User.create({
       name: 'Hereglegch10',
       email: 'hereglegch10@gmail.com',
       username: 'user9',
@@ -100,7 +100,7 @@ mongoose.connect(process.env.MONGODB_URI)
       role: 'user'
     });
 
-     await User.create({
+    await User.create({
       name: 'Hereglegch11',
       email: 'hereglegch11@gmail.com',
       username: 'user10',

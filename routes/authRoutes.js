@@ -9,7 +9,7 @@ router.post('/login', async (req, res) => {
   console.log('🔐 LOGIN ➤ Хэрэглэгч нэвтрэх гэж байна:', uname);
   console.log('🔗 AUTH ➤ Login fetch эхэлж байна...');
 
-  
+
   try {
     // console.log(User.length);
     const user = await User.findOne({ username: uname });
@@ -39,6 +39,7 @@ router.post('/login', async (req, res) => {
 
     console.log('✅ AUTH ➤ Нэвтрэлт амжилттай:', user.username);
     return res.status(200).json({
+      _id: user._id,
       name: user.name,
       username: user.username,
       role: user.role

@@ -7,6 +7,7 @@ const customerSchema = new mongoose.Schema({
   facebook: { type: String, required: true }, // ← нэмэх
   note: String,
   favourite: Boolean,
+  blacklist: Boolean,
   createdAt: { type: Date, default: Date.now }
 });
 

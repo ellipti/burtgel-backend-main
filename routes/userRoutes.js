@@ -61,6 +61,21 @@ router.post('/favourite', async (req, res) => {
   }
 });
 
+router.post('/blacklist', async (req, res) => {
+  try {
+
+    const { id } = req.body;
+
+    const user = await Customer.findOne({ _id: id });
+
+    const result = await Customer.updateOne({ _id: id }, { $set: { blacklist: user.blacklist == true ? false : true } });
+
+    res.status(201).json({});
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
 // GET - role-оор шүүх боломжтой
 router.get('/list', async (req, res) => {
   try {
